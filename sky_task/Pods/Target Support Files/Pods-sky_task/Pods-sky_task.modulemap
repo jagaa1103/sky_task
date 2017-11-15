@@ -1,0 +1,6 @@
+framework module Pods_sky_task {
+  umbrella header "Pods-sky_task-umbrella.h"
+
+  export *
+  module * { export * }
+}

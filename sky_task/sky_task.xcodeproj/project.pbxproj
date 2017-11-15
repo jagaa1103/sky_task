@@ -7,12 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6C80BB918222ADE77E04E5 /* Pods_sky_taskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1B99AF6E8C98B6E4D36253 /* Pods_sky_taskUITests.framework */; };
 		1102354C1FBA036500E60CB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102354B1FBA036500E60CB5 /* AppDelegate.swift */; };
-		1102354E1FBA036500E60CB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102354D1FBA036500E60CB5 /* ViewController.swift */; };
 		110235511FBA036500E60CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1102354F1FBA036500E60CB5 /* Main.storyboard */; };
 		110235531FBA036600E60CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110235521FBA036600E60CB5 /* Assets.xcassets */; };
 		110235561FBA036600E60CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110235541FBA036600E60CB5 /* LaunchScreen.storyboard */; };
 		110235611FBA036600E60CB5 /* sky_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110235601FBA036600E60CB5 /* sky_taskUITests.swift */; };
+		1102356C1FBA03D100E60CB5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102356B1FBA03D100E60CB5 /* DataManager.swift */; };
+		112433391FBB941600B9ADC7 /* sample_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 112433381FBB941600B9ADC7 /* sample_card.png */; };
+		1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA001FBB783A004FE523 /* Itinerary.swift */; };
+		1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */; };
+		1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA0D1FBB7A52004FE523 /* Leg.swift */; };
+		1153DA101FBB7A5B004FE523 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA0F1FBB7A5B004FE523 /* Segment.swift */; };
+		1153DA181FBB7BA6004FE523 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA171FBB7BA6004FE523 /* SearchViewController.swift */; };
+		1153DA211FBB886D004FE523 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1D1FBB886D004FE523 /* profile.png */; };
+		1153DA221FBB886D004FE523 /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1E1FBB886D004FE523 /* explore.png */; };
+		1153DA231FBB886D004FE523 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1F1FBB886D004FE523 /* search.png */; };
+		1153DA241FBB886D004FE523 /* toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA201FBB886D004FE523 /* toolbar.png */; };
+		1153DA261FBB8BD6004FE523 /* form base.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA251FBB8BD6004FE523 /* form base.png */; };
+		1153DA291FBB8C63004FE523 /* back icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA271FBB8C63004FE523 /* back icon.png */; };
+		1153DA2A1FBB8C63004FE523 /* ic_action_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA281FBB8C63004FE523 /* ic_action_share.png */; };
+		115892011FBC508F00961792 /* ItineraryCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115892001FBC508F00961792 /* ItineraryCardListView.swift */; };
+		115892041FBC510600961792 /* ItineraryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115892021FBC510600961792 /* ItineraryCardView.swift */; };
+		115892051FBC510600961792 /* ItineraryCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115892031FBC510600961792 /* ItineraryCardView.xib */; };
+		115892071FBC578100961792 /* icon_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 115892061FBC578100961792 /* icon_sample.png */; };
+		115892091FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png in Resources */ = {isa = PBXBuildFile; fileRef = 115892081FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png */; };
+		8F25C1CF9FD5C004C4EB242D /* Pods_sky_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EF04EDF486F07DEF8BCB4 /* Pods_sky_task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +48,6 @@
 /* Begin PBXFileReference section */
 		110235481FBA036500E60CB5 /* sky_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sky_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1102354B1FBA036500E60CB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1102354D1FBA036500E60CB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		110235501FBA036500E60CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		110235521FBA036600E60CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		110235551FBA036600E60CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +55,31 @@
 		1102355C1FBA036600E60CB5 /* sky_taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sky_taskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		110235601FBA036600E60CB5 /* sky_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sky_taskUITests.swift; sourceTree = "<group>"; };
 		110235621FBA036600E60CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1102356B1FBA03D100E60CB5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		112433381FBB941600B9ADC7 /* sample_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_card.png; sourceTree = "<group>"; };
+		1153DA001FBB783A004FE523 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
+		1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardViewModel.swift; sourceTree = "<group>"; };
+		1153DA0D1FBB7A52004FE523 /* Leg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leg.swift; sourceTree = "<group>"; };
+		1153DA0F1FBB7A5B004FE523 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		1153DA171FBB7BA6004FE523 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1153DA1D1FBB886D004FE523 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		1153DA1E1FBB886D004FE523 /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
+		1153DA1F1FBB886D004FE523 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		1153DA201FBB886D004FE523 /* toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar.png; sourceTree = "<group>"; };
+		1153DA251FBB8BD6004FE523 /* form base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "form base.png"; sourceTree = "<group>"; };
+		1153DA271FBB8C63004FE523 /* back icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back icon.png"; sourceTree = "<group>"; };
+		1153DA281FBB8C63004FE523 /* ic_action_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_share.png; sourceTree = "<group>"; };
+		115892001FBC508F00961792 /* ItineraryCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardListView.swift; sourceTree = "<group>"; };
+		115892021FBC510600961792 /* ItineraryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardView.swift; sourceTree = "<group>"; };
+		115892031FBC510600961792 /* ItineraryCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItineraryCardView.xib; sourceTree = "<group>"; };
+		115892061FBC578100961792 /* icon_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample.png; sourceTree = "<group>"; };
+		115892081FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sentiment_very_satisfied_black_24px.png; sourceTree = "<group>"; };
+		233AA357BA7A5B3761A0BE2C /* Pods-sky_taskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_taskUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C1B99AF6E8C98B6E4D36253 /* Pods_sky_taskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sky_taskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		373C571090AEE74BC89EB7A5 /* Pods-sky_taskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_taskUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		894D601E6C8014DB186F032F /* Pods-sky_task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_task.release.xcconfig"; path = "Pods/Target Support Files/Pods-sky_task/Pods-sky_task.release.xcconfig"; sourceTree = "<group>"; };
+		C19EF04EDF486F07DEF8BCB4 /* Pods_sky_task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sky_task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5043DB4D36A320802435C1 /* Pods-sky_task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_task.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sky_task/Pods-sky_task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F25C1CF9FD5C004C4EB242D /* Pods_sky_task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6C80BB918222ADE77E04E5 /* Pods_sky_taskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +108,8 @@
 				1102354A1FBA036500E60CB5 /* sky_task */,
 				1102355F1FBA036600E60CB5 /* sky_taskUITests */,
 				110235491FBA036500E60CB5 /* Products */,
+				58268EAC7D53E07EB1C525FF /* Pods */,
+				E1F4077093BFC72D8A7593D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +125,12 @@
 		1102354A1FBA036500E60CB5 /* sky_task */ = {
 			isa = PBXGroup;
 			children = (
+				1153DA141FBB7AFB004FE523 /* Manager */,
+				1153DA111FBB7ACB004FE523 /* Controller */,
+				1153DA061FBB78C2004FE523 /* ViewModel */,
+				1153D9FF1FBB77CF004FE523 /* Model */,
+				1153DA191FBB7E12004FE523 /* resources */,
 				1102354B1FBA036500E60CB5 /* AppDelegate.swift */,
-				1102354D1FBA036500E60CB5 /* ViewController.swift */,
 				1102354F1FBA036500E60CB5 /* Main.storyboard */,
 				110235521FBA036600E60CB5 /* Assets.xcassets */,
 				110235541FBA036600E60CB5 /* LaunchScreen.storyboard */,
@@ -96,6 +148,88 @@
 			path = sky_taskUITests;
 			sourceTree = "<group>";
 		};
+		1153D9FF1FBB77CF004FE523 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1153DA001FBB783A004FE523 /* Itinerary.swift */,
+				1153DA0D1FBB7A52004FE523 /* Leg.swift */,
+				1153DA0F1FBB7A5B004FE523 /* Segment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1153DA061FBB78C2004FE523 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1153DA111FBB7ACB004FE523 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1153DA171FBB7BA6004FE523 /* SearchViewController.swift */,
+				115892001FBC508F00961792 /* ItineraryCardListView.swift */,
+				115892021FBC510600961792 /* ItineraryCardView.swift */,
+				115892031FBC510600961792 /* ItineraryCardView.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1153DA141FBB7AFB004FE523 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1102356B1FBA03D100E60CB5 /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1153DA191FBB7E12004FE523 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1153DA1A1FBB7E12004FE523 /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		1153DA1A1FBB7E12004FE523 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				115892081FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png */,
+				115892061FBC578100961792 /* icon_sample.png */,
+				112433381FBB941600B9ADC7 /* sample_card.png */,
+				1153DA271FBB8C63004FE523 /* back icon.png */,
+				1153DA281FBB8C63004FE523 /* ic_action_share.png */,
+				1153DA251FBB8BD6004FE523 /* form base.png */,
+				1153DA1E1FBB886D004FE523 /* explore.png */,
+				1153DA1D1FBB886D004FE523 /* profile.png */,
+				1153DA1F1FBB886D004FE523 /* search.png */,
+				1153DA201FBB886D004FE523 /* toolbar.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		58268EAC7D53E07EB1C525FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE5043DB4D36A320802435C1 /* Pods-sky_task.debug.xcconfig */,
+				894D601E6C8014DB186F032F /* Pods-sky_task.release.xcconfig */,
+				373C571090AEE74BC89EB7A5 /* Pods-sky_taskUITests.debug.xcconfig */,
+				233AA357BA7A5B3761A0BE2C /* Pods-sky_taskUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1F4077093BFC72D8A7593D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C19EF04EDF486F07DEF8BCB4 /* Pods_sky_task.framework */,
+				2C1B99AF6E8C98B6E4D36253 /* Pods_sky_taskUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 110235651FBA036600E60CB5 /* Build configuration list for PBXNativeTarget "sky_task" */;
 			buildPhases = (
+				AEB5846F4F23BCF6EA5FAF9D /* [CP] Check Pods Manifest.lock */,
 				110235441FBA036500E60CB5 /* Sources */,
 				110235451FBA036500E60CB5 /* Frameworks */,
 				110235461FBA036500E60CB5 /* Resources */,
+				1EAECDF15B1FA385CD062BD7 /* [CP] Embed Pods Frameworks */,
+				84E99827DA21A0F2A023C504 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 110235681FBA036600E60CB5 /* Build configuration list for PBXNativeTarget "sky_taskUITests" */;
 			buildPhases = (
+				A1492B4B2BE8E1066920C521 /* [CP] Check Pods Manifest.lock */,
 				110235581FBA036600E60CB5 /* Sources */,
 				110235591FBA036600E60CB5 /* Frameworks */,
 				1102355A1FBA036600E60CB5 /* Resources */,
+				326C9D5C55AE805601B71C10 /* [CP] Embed Pods Frameworks */,
+				0CC0DF01C09A5335E6B9C6DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,8 +320,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				110235561FBA036600E60CB5 /* LaunchScreen.storyboard in Resources */,
+				112433391FBB941600B9ADC7 /* sample_card.png in Resources */,
+				115892091FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png in Resources */,
+				1153DA231FBB886D004FE523 /* search.png in Resources */,
 				110235531FBA036600E60CB5 /* Assets.xcassets in Resources */,
+				1153DA2A1FBB8C63004FE523 /* ic_action_share.png in Resources */,
+				1153DA241FBB886D004FE523 /* toolbar.png in Resources */,
+				1153DA291FBB8C63004FE523 /* back icon.png in Resources */,
+				115892071FBC578100961792 /* icon_sample.png in Resources */,
 				110235511FBA036500E60CB5 /* Main.storyboard in Resources */,
+				1153DA221FBB886D004FE523 /* explore.png in Resources */,
+				1153DA211FBB886D004FE523 /* profile.png in Resources */,
+				1153DA261FBB8BD6004FE523 /* form base.png in Resources */,
+				115892051FBC510600961792 /* ItineraryCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,13 +345,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CC0DF01C09A5335E6B9C6DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EAECDF15B1FA385CD062BD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sky_task/Pods-sky_task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		326C9D5C55AE805601B71C10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84E99827DA21A0F2A023C504 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sky_task/Pods-sky_task-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1492B4B2BE8E1066920C521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEB5846F4F23BCF6EA5FAF9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		110235441FBA036500E60CB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1102354E1FBA036500E60CB5 /* ViewController.swift in Sources */,
+				115892011FBC508F00961792 /* ItineraryCardListView.swift in Sources */,
+				1153DA101FBB7A5B004FE523 /* Segment.swift in Sources */,
+				115892041FBC510600961792 /* ItineraryCardView.swift in Sources */,
+				1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */,
+				1153DA181FBB7BA6004FE523 /* SearchViewController.swift in Sources */,
+				1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */,
+				1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */,
 				1102354C1FBA036500E60CB5 /* AppDelegate.swift in Sources */,
+				1102356C1FBA03D100E60CB5 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +602,7 @@
 		};
 		110235661FBA036600E60CB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE5043DB4D36A320802435C1 /* Pods-sky_task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +618,7 @@
 		};
 		110235671FBA036600E60CB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894D601E6C8014DB186F032F /* Pods-sky_task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +634,7 @@
 		};
 		110235691FBA036600E60CB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373C571090AEE74BC89EB7A5 /* Pods-sky_taskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,6 +651,7 @@
 		};
 		1102356A1FBA036600E60CB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233AA357BA7A5B3761A0BE2C /* Pods-sky_taskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ItineraryListView.tableView(_:heightForRowAt:):ItineraryListView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell?.bounds.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
