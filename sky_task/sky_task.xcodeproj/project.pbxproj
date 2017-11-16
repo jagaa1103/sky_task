@@ -15,6 +15,7 @@
 		110235611FBA036600E60CB5 /* sky_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110235601FBA036600E60CB5 /* sky_taskUITests.swift */; };
 		1102356C1FBA03D100E60CB5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102356B1FBA03D100E60CB5 /* DataManager.swift */; };
 		112433391FBB941600B9ADC7 /* sample_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 112433381FBB941600B9ADC7 /* sample_card.png */; };
+		114AE6F91FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114AE6F81FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift */; };
 		1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA001FBB783A004FE523 /* Itinerary.swift */; };
 		1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */; };
 		1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA0D1FBB7A52004FE523 /* Leg.swift */; };
@@ -57,6 +58,7 @@
 		110235621FBA036600E60CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1102356B1FBA03D100E60CB5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		112433381FBB941600B9ADC7 /* sample_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_card.png; sourceTree = "<group>"; };
+		114AE6F81FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardListViewModel.swift; sourceTree = "<group>"; };
 		1153DA001FBB783A004FE523 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardViewModel.swift; sourceTree = "<group>"; };
 		1153DA0D1FBB7A52004FE523 /* Leg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leg.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		1153DA061FBB78C2004FE523 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				114AE6F81FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift */,
 				1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */,
 			);
 			path = ViewModel;
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114AE6F91FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift in Sources */,
 				115892011FBC508F00961792 /* ItineraryCardListView.swift in Sources */,
 				1153DA101FBB7A5B004FE523 /* Segment.swift in Sources */,
 				115892041FBC510600961792 /* ItineraryCardView.swift in Sources */,

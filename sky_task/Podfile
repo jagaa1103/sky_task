@@ -6,11 +6,14 @@ target 'sky_task' do
   use_frameworks!
 
   # Pods for sky_task
-  pod 'Alamofire', '~> 4.5'
+  pod 'Alamofire',  '~> 4.5'
+  pod 'RxSwift',    '~> 4.0'
 
   target 'sky_taskUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
   end
 
 end

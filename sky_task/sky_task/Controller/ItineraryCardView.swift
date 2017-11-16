@@ -10,28 +10,36 @@ import UIKit
 
 class ItineraryCardView: UITableViewCell {
     
-    let viewModel = ItineraryCardViewModel()
+    @IBOutlet weak var timeLabel: UILabel!
     
-    @IBOutlet weak var outboundView: UIView!
-    @IBOutlet weak var inboundView: UIView!
-    @IBOutlet weak var footerView: UIView!
-    
-    @IBOutlet weak var outbound_image: UIImageView!
-    @IBOutlet weak var outbound_time: UILabel!
-    @IBOutlet weak var outbound_cities_flightcompany: UILabel!
-    @IBOutlet weak var outbound_stop: UILabel!
-    @IBOutlet weak var outbound_duration: UILabel!
-    
-    @IBOutlet weak var inbound_image: UIImageView!
-    @IBOutlet weak var inbound_time: UILabel!
-    @IBOutlet weak var inbound_cities_flightcompany: UILabel!
-    @IBOutlet weak var inbound_stop: UILabel!
-    @IBOutlet weak var inbound_duration: UILabel!
-    
-    @IBOutlet weak var footer_sentiment_icon: UIImageView!
-    @IBOutlet weak var footer_sentiment_point: UILabel!
-    @IBOutlet weak var footer_price: UILabel!
-    @IBOutlet weak var footer_booking_count: UILabel!
-    
-    
+    var viewModel: ItineraryCardViewModel!
+    func setData(data: Itinerary){
+        DispatchQueue.main.async {
+            self.viewModel = ItineraryCardViewModel()
+            self.viewModel.itinerary = data
+            self.timeLabel.text = self.viewModel.outbound_image
+        }
+    }
+//
+//
+//    init(data: Itinerary) {
+//        super.init(style: .default, reuseIdentifier: "ItineraryCard")
+//        viewModel = ItineraryCardViewModel(itinerary: data)
+//        outbound_image.image = UIImage(contentsOfFile: viewModel.outbound_image)
+//        outbound_time.text = viewModel.outbound_time
+//        outbound_cities_flightcompany.text = viewModel.outbound_cities_flightcompany
+//        outbound_stop.text = viewModel.outbound_stop
+//        outbound_duration.text = viewModel.outbound_duration
+//
+//        inbound_image.image = UIImage(contentsOfFile: viewModel.inbound_image)
+//        inbound_time.text = viewModel.inbound_time
+//        inbound_cities_flightcompany.text = viewModel.inbound_cities_flightcompany
+//        inbound_stop.text = viewModel.inbound_stop
+//        inbound_duration.text = viewModel.inbound_duration
+//
+//        footer_sentiment_icon.image = UIImage(contentsOfFile: viewModel.footer_sentiment_icon)
+//        footer_sentiment_point.text = viewModel.footer_sentiment_point
+//        footer_price.text = viewModel.footer_price
+//        footer_booking_count.text = viewModel.footer_booking_count
+//    }
 }

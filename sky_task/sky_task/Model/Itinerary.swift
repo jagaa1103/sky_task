@@ -8,7 +8,25 @@
 
 import Foundation
 
+struct Itinerary: Codable {
+//    let bookingDetailsLink: BookingDetailsLink
+//    var BookingDetailsLink: BookingDetailsLink {
+//        return bookingDetailsLink
+//    }
+    var InboundLegId: String
+    var OutboundLegId: String
+//    var PricingOptions: [PricingOptions]
+}
 
-struct Itinerary {
-    
+struct BookingDetailsLink {
+    var Body: String
+    var Method: String
+    var Uri: String
+}
+
+struct PricingOptions {
+    var Agents: Int
+    var DeeplinkUrl: String
+    var Price: Int
+    var QuoteAgeInMinutes: Int
 }

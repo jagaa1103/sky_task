@@ -147,25 +147,7 @@
             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="emoji" destination="Qov-eF-mgK" id="VRg-5h-Lwd"/>
-                <outlet property="footerView" destination="Uql-kr-rE4" id="Y2k-L0-iH2"/>
-                <outlet property="footer_booking_count" destination="a9k-AC-6JF" id="nBU-JF-QaL"/>
-                <outlet property="footer_emoji" destination="Qov-eF-mgK" id="J7W-Ce-8bU"/>
-                <outlet property="footer_price" destination="1V6-s3-mGi" id="by9-UB-5mN"/>
-                <outlet property="footer_sentiment_icon" destination="Qov-eF-mgK" id="Ont-aG-JAF"/>
-                <outlet property="footer_sentiment_point" destination="Mxx-55-15G" id="iwe-8n-FCf"/>
-                <outlet property="inboundView" destination="VqN-iw-Gtw" id="1hf-J7-hjO"/>
-                <outlet property="inbound_cities_flightcompany" destination="kk1-B0-RcH" id="ABl-0f-YYj"/>
-                <outlet property="inbound_duration" destination="a8b-Im-5V1" id="yVQ-k2-c0G"/>
-                <outlet property="inbound_image" destination="Gjc-l4-Bwf" id="aZq-Jw-l2b"/>
-                <outlet property="inbound_stop" destination="ssT-eN-ic8" id="nP6-v5-jZ5"/>
-                <outlet property="inbound_time" destination="X5Z-Rj-fII" id="Hf4-8M-ZVY"/>
-                <outlet property="outboundView" destination="WLq-fF-M2D" id="Vwg-f0-rPJ"/>
-                <outlet property="outbound_cities_flightcompany" destination="cD1-SX-itH" id="uc8-Cp-H5S"/>
-                <outlet property="outbound_duration" destination="Rl0-1E-erL" id="8aJ-7T-NcG"/>
-                <outlet property="outbound_image" destination="8BR-qo-Z9q" id="km4-eU-gIz"/>
-                <outlet property="outbound_stop" destination="deO-Jm-lbR" id="txj-jt-O2S"/>
-                <outlet property="outbound_time" destination="twL-0X-xOc" id="uqn-H2-rjO"/>
+                <outlet property="timeLabel" destination="twL-0X-xOc" id="YBt-eG-iwK"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="94"/>
         </tableViewCell>

@@ -139,6 +139,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Mx9-rx-HEd"/>
                     </view>
                     <connections>
                         <outlet property="itineraryTable" destination="ys5-vc-gYv" id="m3N-JG-Sad"/>
