@@ -8,9 +8,10 @@
 
 import Foundation
 import Alamofire
+import RxSwift
+import SwiftyJSON
 
 class DataManager {
-    typealias ItineraryListListener = ()->Array<Itinerary>?
     let urlString = "http://business.skyscanner.net/apiservices/pricing/v1.0/"
     let headers1 = [ "Content-Type": "application/x-www-form-urlencoded" ]
     let headers2 = [ "Accept": "application/json" ]
@@ -22,7 +23,9 @@ class DataManager {
         "locationSchema":"sky",
         "apikey": "ss630745725358065467897349852985",
         "grouppricing":"on",
-        "originplace":"EDI-sky",
+//        "originplace":"EDI-sky",
+//        "originplace":"PARI-sky",
+        "originplace":"BUD-sky",
         "destinationplace":"LOND-sky",
         "outbounddate":"2017-11-20",
         "inbounddate":"2017-11-27",
@@ -36,7 +39,6 @@ class DataManager {
         "pageSize": "10",
         "apiKey": "ss630745725358065467897349852985"
     ]
-
     var session = ""
     
     func requestSession(completion: @escaping (Bool)->()){
@@ -62,35 +64,54 @@ class DataManager {
         }
     }
     
-    func getDatas() -> ItineraryListListener? {
+    func getDatas(completion: @escaping ([Itinerary]?)->()) {
         requestSession(completion: { res in
             if res {
-                return self.requestData()
+                return self.requestData(completion: { res in
+                    completion(res)
+                })
             }
         })
     }
     
-    func requestData() -> ItineraryListListener {
+    func requestData(completion: @escaping ([Itinerary]?)->()) {
         Alamofire.request(session, method: .get, parameters: params2, encoding: URLEncoding(), headers: headers2).responseJSON{ response in
-            if let error = response.error {
-                print("getDatas: " + error.localizedDescription)
-                return nil
-            }else{
-                return self.jsonToItineraries(data: response.data!)
+            switch response.result {
+            case .success(let value):
+                print("data is arrived")
+                completion(self.parseToItineraries(json: JSON(value)))
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
             }
         }
     }
 }
 
 extension DataManager {
-    func jsonToItineraries(data: Data) -> Array<Itinerary>? {
-        print(data)
-        do {
-            let itineraries = try JSONDecoder().decode([Itinerary].self, from: data)
-            return itineraries
-        } catch {
-            print(error.localizedDescription)
-            return nil
+    func parseToItineraries(json: JSON) -> [Itinerary] {
+        let Places = json["Places"].arrayValue.map{ return Place(json: $0) }
+        let Carriers = json["Carriers"].arrayValue.map{ return Carrier(json: $0) }
+        var itineraries = [Itinerary]()
+        var Segments = [Segment]()
+        var Legs = [Leg]()
+        
+        json["Segments"].arrayValue.forEach{
+            var segment = Segment(json: $0)
+            segment.setPlaces(places: Places)
+            segment.setCarrierDetail(carriers: Carriers)
+            Segments.append(segment)
         }
+        json["Legs"].arrayValue.forEach{
+            var leg = Leg(json: $0)
+            leg.setSegment(segments: Segments)
+            Legs.append(leg)
+        }
+        json["Itineraries"].arrayValue.forEach {
+            var itinerary = Itinerary(json: $0)
+            itinerary.setLegs(legs: Legs)
+            itineraries.append(itinerary)
+        }
+        return itineraries
     }
 }

@@ -8,6 +8,7 @@ target 'sky_task' do
   # Pods for sky_task
   pod 'Alamofire',  '~> 4.5'
   pod 'RxSwift',    '~> 4.0'
+  pod 'SwiftyJSON'
 
   target 'sky_taskUITests' do
     inherit! :search_paths

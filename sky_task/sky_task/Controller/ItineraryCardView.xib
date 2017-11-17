@@ -50,7 +50,7 @@
                                 <color key="textColor" red="0.53767937421798706" green="0.50829130411148071" blue="0.5827144980430603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sample.png" translatesAutoresizingMaskIntoConstraints="NO" id="8BR-qo-Z9q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sample.png" translatesAutoresizingMaskIntoConstraints="NO" id="8BR-qo-Z9q">
                                 <rect key="frame" x="15" y="15" width="31" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -89,7 +89,7 @@
                                 <color key="textColor" red="0.53767937421798706" green="0.50829130411148071" blue="0.5827144980430603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sample.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-l4-Bwf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sample.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-l4-Bwf">
                                 <rect key="frame" x="15" y="15" width="31" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -147,7 +147,17 @@
             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="timeLabel" destination="twL-0X-xOc" id="YBt-eG-iwK"/>
+                <outlet property="inboundDurationLabel" destination="a8b-Im-5V1" id="Syi-5G-f5h"/>
+                <outlet property="inboundImage" destination="Gjc-l4-Bwf" id="nlT-dt-9Hi"/>
+                <outlet property="inboundPlaceLabel" destination="kk1-B0-RcH" id="eCb-hQ-td9"/>
+                <outlet property="inboundStopLabel" destination="ssT-eN-ic8" id="Hqz-X9-Tma"/>
+                <outlet property="inboundTimeLabel" destination="X5Z-Rj-fII" id="eHT-vB-Qhk"/>
+                <outlet property="outboundDurationLabel" destination="Rl0-1E-erL" id="gQu-yj-fEC"/>
+                <outlet property="outboundImage" destination="8BR-qo-Z9q" id="ePu-kF-ug0"/>
+                <outlet property="outboundPlaceLabel" destination="cD1-SX-itH" id="5lL-Yz-n3L"/>
+                <outlet property="outboundStopLabel" destination="deO-Jm-lbR" id="w2Y-5k-nep"/>
+                <outlet property="outboundTimeLabel" destination="twL-0X-xOc" id="4rK-Ok-Y1T"/>
+                <outlet property="priceLabel" destination="1V6-s3-mGi" id="mTh-Bc-rjO"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="94"/>
         </tableViewCell>

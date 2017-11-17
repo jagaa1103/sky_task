@@ -15,6 +15,8 @@
 		110235611FBA036600E60CB5 /* sky_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110235601FBA036600E60CB5 /* sky_taskUITests.swift */; };
 		1102356C1FBA03D100E60CB5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1102356B1FBA03D100E60CB5 /* DataManager.swift */; };
 		112433391FBB941600B9ADC7 /* sample_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 112433381FBB941600B9ADC7 /* sample_card.png */; };
+		112CA00A1FBEF58D00E6605A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CA0091FBEF58D00E6605A /* Place.swift */; };
+		112CA00C1FBEF59C00E6605A /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CA00B1FBEF59C00E6605A /* Carrier.swift */; };
 		114AE6F91FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114AE6F81FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift */; };
 		1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA001FBB783A004FE523 /* Itinerary.swift */; };
 		1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */; };
@@ -33,6 +35,7 @@
 		115892051FBC510600961792 /* ItineraryCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115892031FBC510600961792 /* ItineraryCardView.xib */; };
 		115892071FBC578100961792 /* icon_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 115892061FBC578100961792 /* icon_sample.png */; };
 		115892091FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png in Resources */ = {isa = PBXBuildFile; fileRef = 115892081FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png */; };
+		11D46D941FBDB7C80065D34B /* Agents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D46D931FBDB7C80065D34B /* Agents.swift */; };
 		8F25C1CF9FD5C004C4EB242D /* Pods_sky_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EF04EDF486F07DEF8BCB4 /* Pods_sky_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,8 @@
 		110235621FBA036600E60CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1102356B1FBA03D100E60CB5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		112433381FBB941600B9ADC7 /* sample_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_card.png; sourceTree = "<group>"; };
+		112CA0091FBEF58D00E6605A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		112CA00B1FBEF59C00E6605A /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
 		114AE6F81FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardListViewModel.swift; sourceTree = "<group>"; };
 		1153DA001FBB783A004FE523 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 		1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardViewModel.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		115892031FBC510600961792 /* ItineraryCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItineraryCardView.xib; sourceTree = "<group>"; };
 		115892061FBC578100961792 /* icon_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample.png; sourceTree = "<group>"; };
 		115892081FBC5DEF00961792 /* ic_sentiment_very_satisfied_black_24px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sentiment_very_satisfied_black_24px.png; sourceTree = "<group>"; };
+		11D46D931FBDB7C80065D34B /* Agents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agents.swift; sourceTree = "<group>"; };
 		233AA357BA7A5B3761A0BE2C /* Pods-sky_taskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_taskUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C1B99AF6E8C98B6E4D36253 /* Pods_sky_taskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sky_taskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		373C571090AEE74BC89EB7A5 /* Pods-sky_taskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sky_taskUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sky_taskUITests/Pods-sky_taskUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				1153DA001FBB783A004FE523 /* Itinerary.swift */,
 				1153DA0D1FBB7A52004FE523 /* Leg.swift */,
 				1153DA0F1FBB7A5B004FE523 /* Segment.swift */,
+				11D46D931FBDB7C80065D34B /* Agents.swift */,
+				112CA0091FBEF58D00E6605A /* Place.swift */,
+				112CA00B1FBEF59C00E6605A /* Carrier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,12 +457,15 @@
 			files = (
 				114AE6F91FBC7BAD00E680E9 /* ItineraryCardListViewModel.swift in Sources */,
 				115892011FBC508F00961792 /* ItineraryCardListView.swift in Sources */,
+				112CA00C1FBEF59C00E6605A /* Carrier.swift in Sources */,
 				1153DA101FBB7A5B004FE523 /* Segment.swift in Sources */,
+				112CA00A1FBEF58D00E6605A /* Place.swift in Sources */,
 				115892041FBC510600961792 /* ItineraryCardView.swift in Sources */,
 				1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */,
 				1153DA181FBB7BA6004FE523 /* SearchViewController.swift in Sources */,
 				1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */,
 				1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */,
+				11D46D941FBDB7C80065D34B /* Agents.swift in Sources */,
 				1102354C1FBA036500E60CB5 /* AppDelegate.swift in Sources */,
 				1102356C1FBA03D100E60CB5 /* DataManager.swift in Sources */,
 			);

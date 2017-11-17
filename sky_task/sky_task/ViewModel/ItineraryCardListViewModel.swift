@@ -6,44 +6,35 @@
 //  Copyright © 2017 Enkhjargal Gansukh. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct ItineraryCardListViewModel {
+class ItineraryCardListViewModel {
     let dataManager = DataManager()
-    var itineraries = Array<Itinerary>()
+    var itineraries = [Itinerary]()
     
     func numberOfRowsInSection()->Int {
-        return 10
+        return itineraries.count
     }
     
-    func infoOfCellAt(index: Int) -> Itinerary {
+    func infoByIndex(index: Int) -> Itinerary? {
         if itineraries.count > 0 {
             return itineraries[index]
         } else {
-            return Itinerary(InboundLegId: "inBoundLegId in here", OutboundLegId: "outBoundLegId in here")
+            return nil
         }
     }
     
-    func cellAt(index: Int) -> UITableViewCell {
-        return ItineraryCardView()
-    }
-    
-    func cellHeight()->CGFloat {
-        return 194
-    }
-}
-
-extension ItineraryCardListViewModel {
-    func initSession(){
-        dataManager.getSession()
-    }
-    func fetchItineraries(){
-//        dataManager.getData(completion: { res in
-//            if let itineraryList = res {
-//                for itinerary in itineraryList {
-//                    print("InboundLegId : \(itinerary.InboundLegId), OutboundLegId : \(itinerary.OutboundLegId)")
-//                }
-//            }
-//        })
+    func fetchData(completion: @escaping (Bool)->Void ){
+        dataManager.getDatas(completion: { res in
+            DispatchQueue.main.async {
+                if let list = res {
+                    self.itineraries = list
+                    print(self.itineraries)
+                    completion(true)
+                }else{
+                    completion(false)
+                }
+            }
+        })
     }
 }
