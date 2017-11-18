@@ -16,7 +16,7 @@ struct ItineraryCardViewModel {
         guard let leg = itinerary.OutboundLeg else { return nil }
         guard let urlString = leg.Segments[0].CarrierDetail?.ImageUrl else { return nil }
         let code = urlString.split(separator: "/").last!
-        return "https://logos.skyscnr.com/images/airlines/favicon/\(code).png"
+        return "https://logos.skyscnr.com/images/airlines/favicon/\(code)"
     }
     var outbound_time: String {
         if let dateArrival = itinerary.OutboundLeg?.Arrival?.toHHMM(), let dateDeparture = itinerary.OutboundLeg?.Departure?.toHHMM() {
@@ -53,7 +53,7 @@ struct ItineraryCardViewModel {
         guard let leg = itinerary.InboundLeg else { return nil }
         guard let urlString = leg.Segments[0].CarrierDetail?.ImageUrl else { return nil }
         let code = urlString.split(separator: "/").last!
-        return "https://logos.skyscnr.com/images/airlines/favicon/\(code).png"
+        return "https://logos.skyscnr.com/images/airlines/favicon/\(code)"
     }
     var inbound_time: String {
         if let dateArrival = itinerary.InboundLeg?.Arrival?.toHHMM(), let dateDeparture = itinerary.InboundLeg?.Departure?.toHHMM() {
@@ -96,7 +96,11 @@ struct ItineraryCardViewModel {
         return String(10.0)
     }
     var footer_price: String {
-        return "\u{00a3}" + String(itinerary.PricingOptions[0].Price)
+        var currency = "\u{00a3}"
+//        if let curr = itinerary.currency {
+//            currency = curr.Symbol.lowercased()
+//        }
+        return  currency + String(itinerary.PricingOptions[0].Price)
     }
     var footer_booking_count: String {
         if (itinerary.OutboundLeg != nil), (itinerary.InboundLeg != nil) {

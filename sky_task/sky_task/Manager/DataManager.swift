@@ -23,9 +23,9 @@ class DataManager {
         "locationSchema":"sky",
         "apikey": "ss630745725358065467897349852985",
         "grouppricing":"on",
-//        "originplace":"EDI-sky",
+        "originplace":"EDI-sky",
 //        "originplace":"PARI-sky",
-        "originplace":"BUD-sky",
+//        "originplace":"BUD-sky",
         "destinationplace":"LOND-sky",
         "outbounddate":"2017-11-20",
         "inbounddate":"2017-11-27",
@@ -40,6 +40,7 @@ class DataManager {
         "apiKey": "ss630745725358065467897349852985"
     ]
     var session = ""
+    var currencies = [Currency]()
     
     func requestSession(completion: @escaping (Bool)->()){
         if session != "" {
@@ -96,6 +97,8 @@ extension DataManager {
         var Segments = [Segment]()
         var Legs = [Leg]()
         
+        currencies = json["Currencies"].arrayValue.map{ return Currency(json: $0) }
+        
         json["Segments"].arrayValue.forEach{
             var segment = Segment(json: $0)
             segment.setPlaces(places: Places)
@@ -110,6 +113,9 @@ extension DataManager {
         json["Itineraries"].arrayValue.forEach {
             var itinerary = Itinerary(json: $0)
             itinerary.setLegs(legs: Legs)
+            if currencies.count > 0 {
+                itinerary.currency = currencies[0]
+            }
             itineraries.append(itinerary)
         }
         return itineraries

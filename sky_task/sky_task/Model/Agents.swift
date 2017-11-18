@@ -6,4 +6,3 @@
 //  Copyright © 2017 Enkhjargal Gansukh. All rights reserved.
 //
 
-import Foundation

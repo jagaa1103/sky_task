@@ -18,6 +18,8 @@ struct Itinerary {
     var OutboundLeg: Leg?
     var InboundLeg: Leg?
     
+    var currency: Currency?
+    
     init(json: JSON) {
         InboundLegId = json["InboundLegId"].stringValue
         OutboundLegId = json["OutboundLegId"].stringValue

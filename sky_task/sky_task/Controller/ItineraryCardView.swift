@@ -54,6 +54,7 @@ extension UIImageView {
             let data = try Data(contentsOf: URL(string: urlString)!)
             DispatchQueue.main.async {
                 let image = UIImage(data: data)
+                self.layer.cornerRadius = 8.0
                 self.image = image
             }
         } catch {
