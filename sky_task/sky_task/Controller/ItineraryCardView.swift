@@ -54,7 +54,8 @@ extension UIImageView {
             let data = try Data(contentsOf: URL(string: urlString)!)
             DispatchQueue.main.async {
                 let image = UIImage(data: data)
-                self.layer.cornerRadius = 8.0
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 5.0
                 self.image = image
             }
         } catch {
@@ -62,16 +63,3 @@ extension UIImageView {
         }
     }
 }
-//extension UIImage {
-//    func loadFromServer(urlString: String){
-//        do {
-//            let data = try Data(contentsOf: URL(string: urlString)!)
-//            DispatchQueue.main.async {
-//                self.init(data: data)
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
-//}
-

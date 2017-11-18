@@ -6,8 +6,6 @@
 //  Copyright © 2017 Enkhjargal Gansukh. All rights reserved.
 //
 
-import UIKit
-
 struct ItineraryCardViewModel {
     var itinerary:Itinerary!
     
@@ -96,10 +94,7 @@ struct ItineraryCardViewModel {
         return String(10.0)
     }
     var footer_price: String {
-        var currency = "\u{00a3}"
-//        if let curr = itinerary.currency {
-//            currency = curr.Symbol.lowercased()
-//        }
+        let currency = "\u{00a3}"
         return  currency + String(itinerary.PricingOptions[0].Price)
     }
     var footer_booking_count: String {
