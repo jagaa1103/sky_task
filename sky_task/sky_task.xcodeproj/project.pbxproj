@@ -23,7 +23,6 @@
 		1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */; };
 		1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA0D1FBB7A52004FE523 /* Leg.swift */; };
 		1153DA101FBB7A5B004FE523 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA0F1FBB7A5B004FE523 /* Segment.swift */; };
-		1153DA181FBB7BA6004FE523 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153DA171FBB7BA6004FE523 /* SearchViewController.swift */; };
 		1153DA211FBB886D004FE523 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1D1FBB886D004FE523 /* profile.png */; };
 		1153DA221FBB886D004FE523 /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1E1FBB886D004FE523 /* explore.png */; };
 		1153DA231FBB886D004FE523 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1153DA1F1FBB886D004FE523 /* search.png */; };
@@ -70,7 +69,6 @@
 		1153DA071FBB7917004FE523 /* ItineraryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCardViewModel.swift; sourceTree = "<group>"; };
 		1153DA0D1FBB7A52004FE523 /* Leg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leg.swift; sourceTree = "<group>"; };
 		1153DA0F1FBB7A5B004FE523 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
-		1153DA171FBB7BA6004FE523 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1153DA1D1FBB886D004FE523 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		1153DA1E1FBB886D004FE523 /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
 		1153DA1F1FBB886D004FE523 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		1153DA111FBB7ACB004FE523 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1153DA171FBB7BA6004FE523 /* SearchViewController.swift */,
 				115892001FBC508F00961792 /* ItineraryCardListView.swift */,
 				115892021FBC510600961792 /* ItineraryCardView.swift */,
 				115892031FBC510600961792 /* ItineraryCardView.xib */,
@@ -465,7 +462,6 @@
 				112CA00A1FBEF58D00E6605A /* Place.swift in Sources */,
 				115892041FBC510600961792 /* ItineraryCardView.swift in Sources */,
 				1153DA011FBB783A004FE523 /* Itinerary.swift in Sources */,
-				1153DA181FBB7BA6004FE523 /* SearchViewController.swift in Sources */,
 				1153DA0E1FBB7A52004FE523 /* Leg.swift in Sources */,
 				1153DA081FBB7917004FE523 /* ItineraryCardViewModel.swift in Sources */,
 				11D46D941FBDB7C80065D34B /* Agents.swift in Sources */,

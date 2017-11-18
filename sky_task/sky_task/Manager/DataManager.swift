@@ -16,8 +16,8 @@ class DataManager {
     let headers1 = [ "Content-Type": "application/x-www-form-urlencoded" ]
     let headers2 = [ "Accept": "application/json" ]
     let params2 = [
-//        "pageIndex": "0",
-//        "pageSize": "10",
+        "pageIndex": "0",
+        "pageSize": "20",
         "apiKey": "ss630745725358065467897349852985"
     ]
     var session = ""
@@ -118,23 +118,6 @@ extension DataManager {
         return itineraries
     }
     
-    func getFlightDatesYYYY() -> (String, String) {
-        let dates = getDates()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let strNextMonday = formatter.string(from: dates.0)
-        let strFollowingDay = formatter.string(from: dates.1)
-        return (strNextMonday, strFollowingDay)
-    }
-    
-    func getFlightDatesMMM() -> String {
-        let dates = getDates()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM dd., EEE"
-        let strDate = formatter.string(from: dates.0) + " - " + formatter.string(from: dates.1)
-        return strDate
-    }
-    
     func getDates() -> (Date, Date){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
@@ -161,5 +144,19 @@ extension DataManager {
         let nextMonday = Date(timeIntervalSinceNow: 86400 * dayDiff)
         let followingDay = Date(timeIntervalSinceNow: 86400 * (dayDiff + 1))
         return (nextMonday, followingDay)
+    }
+}
+
+extension Date {
+    var formatMMM : String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd., EEE"
+        return formatter.string(from: self)
+    }
+    
+    var formatYYYY : String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: self)
     }
 }
