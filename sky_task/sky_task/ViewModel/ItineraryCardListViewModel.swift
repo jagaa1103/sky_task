@@ -25,11 +25,11 @@ class ItineraryCardListViewModel {
     }
     
     func fetchData(completion: @escaping (Bool)->Void ){
-        dataManager.getDatas(completion: { res in
+        let dates = dataManager.getFlightDatesYYYY()
+        dataManager.getDatas(outboundDate: dates.0, inboundDate: dates.1, completion: { res in
             DispatchQueue.main.async {
                 if let list = res {
                     self.itineraries = list
-                    print(self.itineraries)
                     completion(true)
                 }else{
                     completion(false)

@@ -11,80 +11,35 @@ struct ItineraryCardViewModel {
     
 //    Outbound Datas
     var outbound_image: String? {
-        guard let leg = itinerary.OutboundLeg else { return nil }
-        guard let urlString = leg.Segments[0].CarrierDetail?.ImageUrl else { return nil }
-        let code = urlString.split(separator: "/").last!
-        return "https://logos.skyscnr.com/images/airlines/favicon/\(code)"
+        return itinerary.OutboundLeg!.getImageLink()
     }
     var outbound_time: String {
-        if let dateArrival = itinerary.OutboundLeg?.Arrival?.toHHMM(), let dateDeparture = itinerary.OutboundLeg?.Departure?.toHHMM() {
-            return dateArrival + " - " + dateDeparture
-        }
-        return  ""
+        return itinerary.OutboundLeg!.getTime()
     }
     var outbound_cities_flightcompany: String {
-        if let originPlace = itinerary.OutboundLeg?.Segments[0].OriginPlace, let departurePlace = itinerary.OutboundLeg?.Segments[0].DestinationPlace, let carrier = itinerary.OutboundLeg?.Segments[0].CarrierDetail {
-            return "\(originPlace.Code)-\(departurePlace.Code), \(carrier.Name)"
-        } else {
-            return ""
-        }
+        return itinerary.OutboundLeg!.getPlaceAndAgentName()
     }
     var outbound_stop: String {
-        var text = "Direct"
-        if let stops = itinerary.OutboundLeg?.Stops, stops.count > 0 {
-            text = String(stops.count) + " stops"
-        }
-        return text
+        return itinerary.OutboundLeg!.getStops()
     }
     var outbound_duration: String {
-        guard let leg = itinerary.OutboundLeg else { print("Duration is not found"); return "" }
-        let hour = leg.Duration / 60
-        let minutes = leg.Duration % 60
-        if hour > 0 {
-            return "\(hour)h \(minutes)m"
-        }else{
-            return "\(minutes)m"
-        }
+        return itinerary.OutboundLeg!.getDuration()
     }
 //    Inbound Datas
     var inbound_image: String? {
-        guard let leg = itinerary.InboundLeg else { return nil }
-        guard let urlString = leg.Segments[0].CarrierDetail?.ImageUrl else { return nil }
-        let code = urlString.split(separator: "/").last!
-        return "https://logos.skyscnr.com/images/airlines/favicon/\(code)"
+        return itinerary.InboundLeg!.getImageLink()
     }
     var inbound_time: String {
-        if let dateArrival = itinerary.InboundLeg?.Arrival?.toHHMM(), let dateDeparture = itinerary.InboundLeg?.Departure?.toHHMM() {
-            return dateArrival + " - " + dateDeparture
-        }
-        return  ""
+        return itinerary.InboundLeg!.getTime()
     }
     var inbound_cities_flightcompany: String {
-        if let leg = itinerary.InboundLeg {
-            if let originPlace = leg.Segments[0].OriginPlace, let departurePlace = leg.Segments[0].DestinationPlace, let carrier = leg.Segments[0].CarrierDetail {
-                    return "\(originPlace.Code)-\(departurePlace.Code), \(carrier.Name)"
-            }
-            return ""
-        } else {
-            return ""
-        }
+        return itinerary.InboundLeg!.getPlaceAndAgentName()
     }
     var inbound_stop: String {
-        var text = "Direct"
-        if let stops = itinerary.InboundLeg?.Stops, stops.count > 0 {
-            text = String(stops.count) + " stops"
-        }
-        return text
+        return itinerary.InboundLeg!.getStops()
     }
     var inbound_duration: String {
-        guard let leg = itinerary.InboundLeg else { print("Duration is not found"); return "" }
-        let hour = leg.Duration / 60
-        let minutes = leg.Duration % 60
-        if hour > 0 {
-            return "\(hour)h \(minutes)m"
-        }else{
-            return "\(minutes)m"
-        }
+        return itinerary.InboundLeg!.getDuration()
     }
 //    Footer Datas
     var footer_sentiment_icon: String {
@@ -94,8 +49,7 @@ struct ItineraryCardViewModel {
         return String(10.0)
     }
     var footer_price: String {
-        let currency = "\u{00a3}"
-        return  currency + String(itinerary.PricingOptions[0].Price)
+        return  "\u{00a3}" + String(itinerary.getCheapest().Price)
     }
     var footer_booking_count: String {
         if (itinerary.OutboundLeg != nil), (itinerary.InboundLeg != nil) {
@@ -105,5 +59,6 @@ struct ItineraryCardViewModel {
         }
     }
 }
+
 
 

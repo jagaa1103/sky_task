@@ -49,6 +49,35 @@ extension Leg {
             }
         })
     }
+    
+    func getPlaceAndAgentName() -> String {
+        if let originPlace = Segments[0].OriginPlace, let departurePlace = Segments[0].DestinationPlace, let carrier = Segments[0].CarrierDetail {
+            return "\(originPlace.Code)-\(departurePlace.Code), \(carrier.Name)"
+        }
+        return ""
+    }
+    
+    func getImageLink() -> String {
+        guard let urlString = Segments[0].CarrierDetail?.ImageUrl else { return "" }
+        let code = urlString.split(separator: "/").last!
+        return "https://logos.skyscnr.com/images/airlines/favicon/\(code)"
+    }
+    
+    func getTime() -> String {
+        if let dateArrival = Arrival?.toHHMM(), let dateDeparture = Departure?.toHHMM() { return dateArrival + " - " + dateDeparture }
+        return  ""
+    }
+    func getStops() -> String {
+        var text = "Direct"
+        if Stops.count > 0 { text = String(Stops.count) + " stops" }
+        return text
+    }
+    func getDuration() -> String {
+        var duration = ""
+        if Duration > 60 { duration += "\(Duration / 60)h " }
+        duration += "\(Duration % 60)m"
+        return duration
+    }
 }
 
 extension String {

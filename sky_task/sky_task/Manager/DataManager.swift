@@ -15,38 +15,36 @@ class DataManager {
     let urlString = "http://business.skyscanner.net/apiservices/pricing/v1.0/"
     let headers1 = [ "Content-Type": "application/x-www-form-urlencoded" ]
     let headers2 = [ "Accept": "application/json" ]
-    let params1 = [
-        "foo": "bar",
-        "country":"UK",
-        "currency":"GBP",
-        "locale":"en-GB",
-        "locationSchema":"sky",
-        "apikey": "ss630745725358065467897349852985",
-        "grouppricing":"on",
-        "originplace":"EDI-sky",
-//        "originplace":"PARI-sky",
-//        "originplace":"BUD-sky",
-        "destinationplace":"LOND-sky",
-        "outbounddate":"2017-11-20",
-        "inbounddate":"2017-11-27",
-        "adults":"1",
-        "children":"0",
-        "infants":"0",
-        "cabinclass":"Economy"
-    ]
     let params2 = [
-        "pageIndex": "0",
-        "pageSize": "10",
+//        "pageIndex": "0",
+//        "pageSize": "10",
         "apiKey": "ss630745725358065467897349852985"
     ]
     var session = ""
     var currencies = [Currency]()
     
-    func requestSession(completion: @escaping (Bool)->()){
+    func requestSession(outDate: String, inDate: String, completion: @escaping (Bool)->()){
         if session != "" {
             completion(true)
             return
         }
+        let params1 = [
+            "foo": "bar",
+            "country":"UK",
+            "currency":"GBP",
+            "locale":"en-GB",
+            "locationSchema":"sky",
+            "apikey": "ss630745725358065467897349852985",
+            "grouppricing":"on",
+            "originplace":"EDI-sky",
+            "destinationplace":"LOND-sky",
+            "outbounddate": outDate,
+            "inbounddate": inDate,
+            "adults":"1",
+            "children":"0",
+            "infants":"0",
+            "cabinclass":"Economy"
+        ]
         Alamofire.request(urlString, method: .post, parameters: params1, encoding: URLEncoding(), headers: headers1).response{ response in
             if let error = response.error {
                 print("getSession : " + error.localizedDescription)
@@ -54,7 +52,6 @@ class DataManager {
             }else {
                 response.response?.allHeaderFields.forEach({ item in
                     if item.key.description == "Location" {
-                        print("getSession: Session url = \(item.value)")
                         self.session = "\(item.value)"
                         completion(true)
                     }else{
@@ -65,8 +62,8 @@ class DataManager {
         }
     }
     
-    func getDatas(completion: @escaping ([Itinerary]?)->()) {
-        requestSession(completion: { res in
+    func getDatas(outboundDate: String, inboundDate: String, completion: @escaping ([Itinerary]?)->()) {
+        requestSession(outDate: outboundDate, inDate: inboundDate, completion: { res in
             if res {
                 return self.requestData(completion: { res in
                     completion(res)
@@ -119,5 +116,50 @@ extension DataManager {
             itineraries.append(itinerary)
         }
         return itineraries
+    }
+    
+    func getFlightDatesYYYY() -> (String, String) {
+        let dates = getDates()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let strNextMonday = formatter.string(from: dates.0)
+        let strFollowingDay = formatter.string(from: dates.1)
+        return (strNextMonday, strFollowingDay)
+    }
+    
+    func getFlightDatesMMM() -> String {
+        let dates = getDates()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM dd., EEE"
+        let strDate = formatter.string(from: dates.0) + " - " + formatter.string(from: dates.1)
+        return strDate
+    }
+    
+    func getDates() -> (Date, Date){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let strDate = dateFormatter.string(from: Date())
+        var dayDiff = 0.0
+        switch strDate {
+        case "Monday":
+            dayDiff = 7
+        case "Tuesday":
+            dayDiff = 6
+        case "Wednesday":
+            dayDiff = 5
+        case "Thursday":
+            dayDiff = 4
+        case "Friday":
+            dayDiff = 3
+        case "Saturday":
+            dayDiff = 2
+        case "Sunday":
+            dayDiff = 1
+        default:
+            dayDiff = 0
+        }
+        let nextMonday = Date(timeIntervalSinceNow: 86400 * dayDiff)
+        let followingDay = Date(timeIntervalSinceNow: 86400 * (dayDiff + 1))
+        return (nextMonday, followingDay)
     }
 }

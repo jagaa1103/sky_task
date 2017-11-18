@@ -39,6 +39,9 @@ extension Itinerary {
         }
         return nil
     }
+    func getCheapest() -> Price {
+        return PricingOptions.min(by: { (a, b)->Bool in return a.Price < b.Price })!
+    }
 }
 
 struct DetailsLink {
